@@ -1,0 +1,109 @@
+
+/**
+ * form
+ */
+
+form { margin-bottom:1em; }
+
+input,
+textarea { 
+    display:block; 
+    margin:.25em 0; 
+    width:90%;
+    border:1px solid #ccc;
+    box-shadow:none;
+    border-radius:3px;
+    padding:.25em;
+}
+
+textarea { 
+    height:50px;
+    resize: vertical; 
+    }
+
+button {
+    margin:.5em 0 0 auto;
+    
+}
+
+
+
+/**
+ * articles
+ */
+
+article {
+    margin:1em 0;
+    padding:1em 0;
+    border-top:1px dashed #333;
+}
+
+.home article {
+    float:left;
+    width:44%; margin-right:5%;
+}
+
+article:hover {
+    background:#fff;
+}
+    
+    
+h2 { margin-bottom:.25em; }
+p { margin-top:.25em; }
+
+
+.active { color: red; }
+.inactive { color: black; }
+
+/**
+ * Global
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    background:#333;
+}
+
+.container {
+    margin:1em auto;
+    padding:1em;
+    width:400px;
+    background:#eee;
+}
+
+@media only screen and (max-width: 550px) {
+
+    .container { 
+        width:90%; 
+        }
+
+}
+
+
+
+/**
+ * Clearfix
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
