@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<script src="js/vendor/jquery-1.9.1.js"></script>
+		<script src="js/vendor/jquery-ui.js"></script>
+        <script>
+        	function showDialog() {        	
+        		var modalWindow = $( "#modal-window" ).dialog( { modal: true, draggable: true, height: 600, width: 800, position: { my: "middle", at: "middle", of: window } } );
+				modalWindow.parent().appendTo($('body[class$="home"]'));
+				modalWindow.parent().css('z-index', 999);
+	       	}
+	       	$(function(){
+		       	$("#popup-picture-img").click(function(){
+		        	$("input[name='inputFile']").trigger('click');
+	        	});
+	        	
+	        	$(document).on("click", "img.popup-bottom-imgs", function(){
+		        	var $thisId = $(this).attr('id');
+		        	$('#weather-text-value').val($thisId);
+		        	$('#image-value').val($(this).attr('data-value'));
+		        	$('#popup-bottom-icons img').removeClass('highlighted');
+		        	$(this).addClass('highlighted');
+	        	});
+	       	});
+        </script>
+    </head>
+    <body class="home">
+        <section class="container">
+        	<div class="top-button">
+				<div class="top-add-button">
+					<a href="#" onclick="showDialog();" >
+						<img src="images/add03.png" class="top-icons" alt="add" />
+		            </a>
+	            </div>
+	            <div class="top-logo-button">
+	            	<img src="images/logo.png" class="top-icons" alt="logo" />
+	            </div>
+	            <div class="top-reset-button">
+	            	<a href="#" onclick="clearLocalStorage();" >
+		            	<img src="images/reset01.png" id="search-reset-img" class="top-icons" alt="reset" />
+	            	</a>
+	            </div>
+            </div>
+        </section><!-- // .container -->
+        <div id="modal-window" >
+        	<div id="popup-top-icons">
+        		<img src="images/picture.png" id="popup-picture-img" class="popup-top-imgs" />
+        		<img src="images/movie.png" class="popup-top-imgs" />
+        		<img src="images/location.png" class="popup-top-imgs" />
+        		<input type="file" id="input-file" name="inputFile" />
+        	</div>
+        	<div id="title-text-wrapper" >
+        		<input type="text" class="modal-text" id="title-text" name="title" />
+        	</div>
+        	<div id="summary-text-wrapper" >
+	        	<textarea class="modal-text" id="summary-text" ></textarea>
+        	</div>
+        	<div id="popup-bottom-icons">
+        		<img src="images/weather01.png" class="popup-bottom-imgs" id="weather01" data-value="weather_value" />
+        		<img src="images/weather02.png" class="popup-bottom-imgs" id="weather02" data-value="weather_value2" />
+        		<img src="images/weather03.png" class="popup-bottom-imgs" id="weather03" data-value="weather_value3" />
+        		<img src="images/weather04.png" class="popup-bottom-imgs" id="weather04" data-value="weather_value4" />
+        		<img src="images/weather05.png" class="popup-bottom-imgs" id="weather05" data-value="weather_value5" />
+        		<img src="images/weather06.png" class="popup-bottom-imgs" id="weather06" data-value="weather_value6" />
+        		<img src="images/weather07.png" class="popup-bottom-imgs" id="weather07" data-value="weather_value7" />
+        		<img src="images/weather08.png" class="popup-bottom-imgs" id="weather08" data-value="weather_value8" />
+        		<img src="images/weather09.png" class="popup-bottom-imgs" id="weather09" data-value="weather_value9" />
+        		<input type="hidden" id="image-value" name="selected-image" value="" />
+        		<input type="hidden" id="weather-text-value" />
+        	</div>
+        	<div id="submit-button-wrapper">
+        		<img src="images/submit.png" id="submit-button-img" />
+        	</div>
+        	<div id="img-name-wrapper">
+        	</div>
+        </div>
+        <section id="feed" class="container clearfix">
+        </section>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+		<script src="js/main.js"></script>
+    </body>
+</html>
