@@ -1,0 +1,405 @@
+html, body {
+	height: 100%;
+}
+
+#map_canvas {
+	height: 100%;
+}
+
+#main-body {
+	background-image: url('images/bottom03.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100%;
+	background-color: #F26C5D;
+}
+
+#cloud-one {
+	position: fixed;
+	top: 13%;
+	left: 20%;
+}
+
+#cloud-two {
+	position: fixed;
+	top: 15%;
+	left: 62%;
+}
+
+#cloud-three {
+	position: fixed;
+	top: 48%;
+	left: 66%;
+}
+
+#cloud-four {
+	position: fixed;
+	top: 48%;
+	left: 28%;
+}
+
+#person {
+	position: fixed;
+	top: 42%;
+	left: 42%;
+	height: 35%;
+}
+
+#logo {
+	float: right;
+	width: 15%;
+	margin-top: 1.5%;
+	margin-right: 3%;
+}
+
+input[type="text"] {
+	text-align: center;
+}
+
+#address {
+	position: fixed;
+	top: 33%;
+	left: 34%;
+}
+
+input#address {
+    font-size:25px;
+    width: 30%;
+}
+
+#searchButton {
+	position: fixed;
+	top: 33.1%;
+	left: 64%;
+	width: 46px;
+}
+
+#eq-logo {
+	
+}
+
+#eq-body {
+	background-color: #F26C5D;
+}
+
+#addressText {
+	position: fixed;
+	top: 6%;
+	left: 32%;
+}
+
+input#addressText {
+	font-size: 25px;
+	width: 30%;
+}
+
+#search-section {
+	margin-bottom: -1%;
+}
+
+#eq-search-button {
+	position: fixed;
+	top: 6%;
+	left: 62%;
+	width: 46px;
+}
+
+#map_canvas {
+	height:80%;
+	top:55px;
+}
+
+
+@media print {
+	html, body {
+		height: auto;
+	}
+
+	#map_canvas {
+		height: 650px;
+	}
+}
+
+/* Smartphones */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+	#addressText {
+		background-color: #F26C5D;
+		color: #FFFFFF;
+	}
+
+	/* main.html */
+	#person {
+		top: 55%;
+		left: 28%;
+		height: 30%;
+	}
+
+	#cloud-one {
+		top: 10%;
+		left: 32%;
+		width: 20%;
+	}
+	
+	#cloud-two {
+		top: 34%;
+		left: 58%;
+		width: 20%;
+	}
+	
+	#cloud-three {
+		top: 50%;
+		left: 70%;
+		width: 24%;
+	}
+	
+	#cloud-four {
+		top: 32%;
+		left: 10%;
+		width: 24%;
+	}
+	
+	#logo {
+		width: 30%;
+		margin-top: 2.5%;
+		margin-right: 4%;
+	}
+	
+	#address {
+		top: 20%;
+		left: 20%;
+	}
+	
+	input#address {
+	    font-size: 20px;
+	    height: 52px;
+	    width: 50%;
+	}
+	
+	#searchButton {
+		top: 20%;
+		left: 70%;
+		width: 62px;
+	}
+	
+	#main-body {
+		background: url('images/bottom03.png') no-repeat center bottom fixed;
+		background-color: #F26C5D;
+	}
+	
+	/* EarthQuake.html */
+	#eq-logo {
+		display: none;
+	}
+	
+	div#map_canvas {
+		height: 96%;
+		top: 64px;
+		left: -2%;
+		width: 104%;
+	}
+	
+	#addressText {
+		top: 0%;
+		left: 0%;
+	}
+	
+	input#addressText {
+		font-size: 35px;
+		width: 92.5%;
+	}
+
+	#eq-search-button {
+		top: 0%;
+		left: 92.5%;
+		width: 75px;
+	}
+}
+
+/* Tablets (Portrait) */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#addressText {
+		background-color: #F26C5D;
+		color: #FFFFFF;
+	}
+
+	#person {
+		top: 53%;
+		left: 32%;
+		height: 30%;
+	}
+
+	#cloud-one {
+		display: none;
+	}
+	
+	#cloud-two {
+		top: 35%;
+		left: 58%;
+	}
+	
+	#cloud-three {
+		top: 50%;
+		left: 70%;
+	}
+	
+	#cloud-four {
+		top: 46%;
+		left: 14%;
+	}
+	
+	#logo {
+		width: 25%;
+		margin-top: 2.5%;
+		margin-right: 4%;
+	}
+	
+	#address {
+		top: 20%;
+		left: 21.875%;
+	}
+	
+	input#address {
+	    font-size: 20px;
+	    height: 52px;
+	    width: 50%;
+	}
+	
+	#searchButton {
+		top: 20%;
+		left: 71.875%;
+		width: 62px;
+	}
+	
+	#main-body {
+		background: url('images/bottom03.png') no-repeat center bottom fixed;
+		background-color: #F26C5D;
+	}
+	
+	/* EarthQuake.html */
+	#eq-logo {
+		display: none;
+	}
+	
+	div#map_canvas {
+		height: 95%;
+		top: 65px;
+		left: -2%;
+		width: 104%;
+	}
+	
+	#addressText {
+		top: 0%;
+		left: 0%;
+	}
+	
+	input#addressText {
+		font-size: 25px;
+		height: 5.4%;
+		width: 92.5%;
+	}
+
+	#eq-search-button {
+		top: 0%;
+		left: 92.5%;
+		width: 76px;
+	}
+}
+
+/* Tablet (Landscape) */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	#addressText {
+		background-color: #F26C5D;
+		color: #FFFFFF;
+	}
+
+	#person {
+		top: 40%;
+		left: 39%;
+		height: 30%;
+	}
+
+	#cloud-one {
+		display: none;
+	}
+	
+	#cloud-two {
+		top: 35%;
+		left: 58%;
+	}
+	
+	#cloud-three {
+		top: 50%;
+		left: 70%;
+	}
+	
+	#cloud-four {
+		top: 46%;
+		left: 14%;
+	}
+	
+	#logo {
+		width: 25%;
+		margin-top: 1%;
+		margin-right: 2%;
+	}
+	
+	#address {
+		top: 20%;
+		left: 22%;
+	}
+	
+	input#address {
+	    font-size: 20px;
+	    height: 52px;
+	    width: 50%;
+	}
+	
+	#searchButton {
+		top: 20%;
+		left: 72%;
+		width: 62px;
+	}
+	
+	#main-body {
+		background: url('images/bottom03.png') no-repeat center bottom fixed;
+		background-color: #F26C5D;
+	}
+	
+	/* EarthQuake.html */
+	#eq-logo {
+		display: none;
+	}
+	
+	div#map_canvas {
+		height: 88%;
+		top: 63px;
+		left: -2%;
+		width: 104%;
+	}
+	
+	#addressText {
+		top: 0%;
+		left: 0%;
+	}
+	
+	input#addressText {
+		font-size: 25px;
+		height: 9.9%;
+		width: 92.5%;
+	}
+
+	#eq-search-button {
+		top: 0%;
+		left: 92.5%;
+		width: 75px;
+	}
+}

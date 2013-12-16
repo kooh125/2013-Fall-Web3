@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Recent Earthquake</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDTgxTtkZwa7ITO83eZ9MDGEEsYa8BIcOU&sensor=false" type="text/javascript"></script>
+		<script src="script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			var $j = jQuery.noConflict();
+			$j(function(){
+				$j('input[type="text"]').each(function(){
+					var default_val = this.value;
+					$j(this).focus(function(){
+						if(this.value == default_val){
+							this.value = '';
+						}
+					});
+					$j(this).blur(function(){
+						if(this.value == ''){
+							this.value = default_val;
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body id="eq-body" onload="getlatlong()">
+		<div id="search-section">
+			<image src="images/logo.png" id="eq-logo" />
+			<input id="addressText" type="text" >
+			<!-- on click of the Submit button, it will call getlatlong() javascript method that will find the earthquakes around the address user inputs -->
+			<input id="eq-search-button" type="image" src="images/search.png" value="Submit" onclick="getlatlong()">
+		</div>
+		<!-- displaying a map with height of 80% -->
+		<div id="map_canvas"></div>
+	</body>
+</html>

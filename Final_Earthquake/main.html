@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Recent Earthquake</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDTgxTtkZwa7ITO83eZ9MDGEEsYa8BIcOU&sensor=false" type="text/javascript"></script>
+		<script src="script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			var $j = jQuery.noConflict();
+			$j(function(){
+				$j('input:image').click(function(){
+					localStorage.setItem('addressVal', $j('input#address').val());
+				});
+
+				$j('input[type="text"]').each(function(){
+					var default_val = this.value;
+					$j(this).focus(function(){
+						if(this.value == default_val){
+							this.value = '';
+						}
+					});
+					$j(this).blur(function(){
+						if(this.value == ''){
+							this.value = default_val;
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body id="main-body" onload="init()">
+		<div>
+			<image src="images/cloud01.png" id="cloud-one" />
+			<image src="images/cloud02.png" id="cloud-two" />
+			<image src="images/cloud03.png" id="cloud-three" />
+			<image src="images/cloud04.png" id="cloud-four" />
+			<image src="images/main.png" id="person" />
+			<image src="images/logo.png" id="logo" />
+			<input id="address" type="text" >
+			<input type="image" src="images/search.png" id="searchButton" onclick="window.location='EarthQuake.html';" />
+		</div>
+		<div id="map_canvas" style="display:none;"></div>
+	</body>
+</html>
